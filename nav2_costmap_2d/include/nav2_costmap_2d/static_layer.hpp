@@ -215,14 +215,14 @@ protected:
 
   // Parameters
   std::string map_topic_;
-  bool map_subscribe_transient_local_;
-  bool subscribe_to_updates_;
-  bool track_unknown_space_;
-  bool use_maximum_;
-  unsigned char lethal_threshold_;
-  unsigned char inscribed_obstacle_cost_value_;
-  unsigned char unknown_cost_value_;
-  bool trinary_costmap_;
+  bool map_subscribe_transient_local_{true};
+  bool subscribe_to_updates_{false};
+  bool track_unknown_space_{false};
+  bool use_maximum_{false};
+  unsigned char lethal_threshold_{100};
+  unsigned char inscribed_obstacle_cost_value_{99};
+  unsigned char unknown_cost_value_{255};
+  bool trinary_costmap_{true};
   bool map_received_{false};
   bool map_received_in_update_bounds_{false};
   tf2::Duration transform_tolerance_;
